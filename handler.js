@@ -22,9 +22,20 @@ function api_recods(response) {
     }
     response.end(JSON.stringify(sendInfo))
 }
+function api_upload(response) {
+    response.writeHead(200, {'Content-type': 'application/json'})
 
+    let sendInfo = {
+        name: '张三',
+        age: '18',
+        job: 'doctor'
+    }
+    response.end(JSON.stringify(sendInfo))
+
+}
 module.exports = {
     home,
     review,
-    api_recods
+    api_recods,
+    api_upload
 }

@@ -7,6 +7,33 @@
     <title>hello node server</title>
 </head>
 <body>
-    Hello world
+    <input type="file" onchange="handleFiles(this.files)">
 </body>
+<script>
+    function handleFiles(files) {
+        console.log(files)
+        if (files.length) {
+            var file = files[0];
+            console.log(file)
+            /*
+            var reader = new FileReader();
+            reader.onload = function () {
+                console.log(this.result)
+                document.getElementById("filecontent").innerHTML = this.result;
+            };
+            reader.readAsText(file, 'utf-8');   //作为字符串读出
+            */
+            var data = new FormData()
+            data.append('file', file)
+           fetch('http://localhost:3000/api/v1/upload', {
+                method: 'POST',
+                body: data
+           }).then(response=>{
+                return response.json();
+           }).then(data=>{
+               console.log(data)
+           })
+        }
+    }  
+</script>
 </html>
