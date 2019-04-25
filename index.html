@@ -25,6 +25,9 @@
             */
             var data = new FormData()
             data.append('file', file)
+            // data.append('name', '张三')
+            // data.append('age', 16)
+            // data.append('job', 'teacher')
            fetch('http://localhost:3000/api/v1/upload', {
                 method: 'POST',
                 body: data

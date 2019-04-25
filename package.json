@@ -1,0 +1,25 @@
+{
+  "name": "hello-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trw357250839/learning-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trw357250839/learning-node/issues"
+  },
+  "homepage": "https://github.com/trw357250839/learning-node#readme",
+  "dependencies": {
+    "compressing": "^1.4.0",
+    "multiparty": "^4.2.1",
+    "pump": "^3.0.0"
+  }
+}
